@@ -7,8 +7,10 @@ syntax on
 colorscheme solarized
 " and make it use the dark background
 set background=dark
-" enable linenumbers
+" enable line numbers
 set number
+" use relative line numbers
+set relativenumber
 " enable a ruler at the bottom of the screen
 set ruler
 " enable commandline completion when in command mode
