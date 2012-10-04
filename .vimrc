@@ -7,10 +7,6 @@ syntax on
 colorscheme solarized
 " and make it use the dark background
 set background=dark
-" enable line numbers
-set number
-" use relative line numbers
-set relativenumber
 " enable a ruler at the bottom of the screen
 set ruler
 " enable commandline completion when in command mode
@@ -34,3 +30,15 @@ set list
 set listchars=tab:▸\ ,eol:¬
 " use the solarized 256 colorscheme
 let g:solarized_termcolors=256
+" use relative line numbers by default
+set relativenumber
+" toggle between relative and absolute line numbers
+function! NumberToggle()
+	if(&relativenumber == 1)
+		set number
+	else
+		set relativenumber
+	endif
+endfunc
+" map Ctrl-C to toggle between relative and absolute line numbers
+nnoremap <C-n> :call NumberToggle()<cr>
