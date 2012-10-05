@@ -16,8 +16,8 @@ export PS1='(\!) \u@\h:\W \[$PROMPT_SMILEY\]\$ ';
 export PROMPT_COMMAND='[ $? -eq 0 ] && PROMPT_SMILEY="" || PROMPT_SMILEY="$(tput setaf 1)! $(tput sgr0)"';
 
 # aliases:
-# use colorized output when listing files
-alias ls='ls -G';
+# use colorized output when listing files and always list all files
+alias ls='ls -Ga';
 # always ask for confirmation when removing files
 alias rm='rm -i';
 # always ask for confirmation when copying files
