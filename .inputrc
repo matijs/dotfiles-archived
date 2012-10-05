@@ -1,5 +1,5 @@
 # only hit tab once instead of twice when possible completions are ambiguous
 set show-all-if-ambiguous on
 
-# ignore case when using command line completion
-set completion-ignore-case on
+# don't ignore case when using command line completion
+set completion-ignore-case off
