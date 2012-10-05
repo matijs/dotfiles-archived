@@ -7,7 +7,7 @@
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH";
 # check whether rvm was installed and if so add it to the PATH
 [ -d "$HOME/.rvm" ] && export PATH="$HOME/.rvm:$PATH";
-# remove duplicates from the path 
+# remove duplicates from the path
 export PATH=`awk -F: '{for(i=1;i<=NF;i++){if(!($i in a)){a[$i];printf s$i;s=":"}}}'<<<$PATH`;
 
 # set prompt:
@@ -22,7 +22,7 @@ alias ls='ls -G';
 alias rm='rm -i';
 # always ask for confirmation when copying files
 alias cp='cp -i';
-# alias `simplehttpd` to start a simple webserver in the current director 
+# alias `simplehttpd` to start a simple webserver in the current director
 alias simplehttpd='python -m SimpleHTTPServer 8888 >/dev/null 2>&1&';
 # alias to edit ~/.bash_profile and reload it after saving
 alias pro='vi ~/.bash_profile; source ~/.bash_profile';
@@ -43,4 +43,4 @@ export EDITOR='vi';
 export MANPAGER='less -X';
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -d "$HOME/.rvm" ]] && [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
