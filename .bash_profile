@@ -27,7 +27,7 @@ export EDITOR='vi';
 export MANPAGER='less -X';
 
 # Load RVM into a shell session *as a function*
-if [ -s "$HOME/.rvm/scripts/rvm" ]; then
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
 	source "$HOME/.rvm/scripts/rvm"
 fi
 
