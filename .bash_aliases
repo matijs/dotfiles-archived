@@ -13,3 +13,8 @@ alias pro='vi ~/.bash_profile; source ~/.bash_profile';
 alias less='less -X';
 # just for fun, but also make bash expand other aliasses for sudo, http://git.io/wtfbash
 alias ffs='sudo ';
+
+# git aliases
+
+# git log
+alias gl='git log --oneline --all --color --graph --decorate'
