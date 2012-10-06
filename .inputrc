@@ -4,5 +4,5 @@ set show-all-if-ambiguous on
 # don't ignore case when using command line completion
 set completion-ignore-case off
 
-" use tab to cycle through autocomplete options¬                                                                                                                     
+# use tab to cycle through autocomplete options¬                                                                                                                     
 TAB: menu-complete¬
