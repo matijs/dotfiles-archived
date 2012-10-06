@@ -15,22 +15,6 @@ export PS1='(\!) \u@\h:\W \[$PROMPT_SMILEY\]\$ ';
 # to be executed every time before a prompt is displayed
 export PROMPT_COMMAND='[ $? -eq 0 ] && PROMPT_SMILEY="" || PROMPT_SMILEY="$(tput setaf 1)! $(tput sgr0)"';
 
-# aliases:
-# use colorized output when listing files and always list all files
-alias ls='ls -Ga';
-# always ask for confirmation when removing files
-alias rm='rm -i';
-# always ask for confirmation when copying files
-alias cp='cp -i';
-# alias `simplehttpd` to start a simple webserver in the current director
-alias simplehttpd='python -m SimpleHTTPServer 8888 >/dev/null 2>&1&';
-# alias to edit ~/.bash_profile and reload it after saving
-alias pro='vi ~/.bash_profile; source ~/.bash_profile';
-# make `less` not clear the screen upon exit
-alias less='less -X';
-# just for fun, but also make bash expand other aliasses for sudo, http://git.io/wtfbash
-alias ffs='sudo ';
-
 # shell variables
 export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
@@ -43,7 +27,11 @@ export EDITOR='vi';
 export MANPAGER='less -X';
 
 # Load RVM into a shell session *as a function*
-if [ -s "$HOME/.rvm/scripts/rvm" ]
-	then
-		source "$HOME/.rvm/scripts/rvm"
+if [ -s "$HOME/.rvm/scripts/rvm" ]; then
+	source "$HOME/.rvm/scripts/rvm"
+fi
+
+# Load aliases
+if [[ -s "$HOME/.bash_aliases" ]]; then
+	source "$HOME/.bash_aliases"
 fi
