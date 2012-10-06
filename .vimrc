@@ -42,3 +42,5 @@ function! NumberToggle()
 endfunc
 " map Ctrl-C to toggle between relative and absolute line numbers
 nnoremap <C-n> :call NumberToggle()<cr>
+" start scrolling 4 lines before hitting the bottom of the screen
+set scrolloff=4
