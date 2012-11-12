@@ -61,8 +61,17 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 # Dock & hot corners                                                          #
 ###############################################################################
 
+# Autohide the Dock
+defaults write com.apple.dock autohide -bool true
+
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 32
+
+# Set the icon size of magnified items to 72 pixels
+defaults write com.apple.dock largesize -int 64
+
+# Magnify Dock icons on hover
+defaults write com.apple.dock magnification -bool true
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
@@ -73,5 +82,8 @@ defaults write com.apple.dock no-glass -bool true
 # Bottom left screen corner → Start screen saver
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# No persistent apps
+defaults write com.apple.dock persistent-apps -array ()
 
 echo "Done. Now go restart to make sure everything works."
