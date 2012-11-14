@@ -84,6 +84,6 @@ defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # No persistent apps
-defaults write com.apple.dock persistent-apps -array ()
+defaults write com.apple.dock persistent-apps -array
 
 echo "Done. Now go restart to make sure everything works."
