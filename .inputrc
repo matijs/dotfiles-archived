@@ -5,4 +5,4 @@ set show-all-if-ambiguous on
 set completion-ignore-case off
 
 # use tab to cycle through autocomplete options
-TAB: menu-complete
+#TAB: menu-complete
