@@ -30,8 +30,12 @@ set list
 set listchars=tab:▸\ ,eol:¬
 " use the solarized 256 colorscheme
 let g:solarized_termcolors=256
-" use relative line numbers by default
-set relativenumber
+" use line numbers
+set number
+" and use relative line numbers by default if possible
+if exists("&relativenumber")
+	set relativenumber
+endif
 " toggle between relative and absolute line numbers
 function! NumberToggle()
 	if(&relativenumber == 1)
