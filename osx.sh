@@ -89,4 +89,11 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # No persistent apps
 defaults write com.apple.dock persistent-apps -array
 
+###############################################################################
+# Sleep                                                                       #
+###############################################################################
+
+# deep sleep after 24 hours instead of the default 70 minutes
+sudo pmset -a standbydelay 86400
+
 echo "Done. Now go restart to make sure everything works."
