@@ -96,4 +96,12 @@ defaults write com.apple.dock persistent-apps -array
 # deep sleep after 24 hours instead of the default 70 minutes
 sudo pmset -a standbydelay 86400
 
+###############################################################################
+# Random stuff                                                                #
+###############################################################################
+
+# link jsc
+ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc ~/bin
+
+
 echo "Done. Now go restart to make sure everything works."
