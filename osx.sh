@@ -103,5 +103,7 @@ sudo pmset -a standbydelay 86400
 # link jsc
 ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc ~/bin
 
+# disable showing release notes for QuickSilver upgrades
+defaults write com.blacktree.quicksilver "Show Release Notes on Upgrade" NO
 
 echo "Done. Now go restart to make sure everything works."
