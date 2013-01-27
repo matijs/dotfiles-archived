@@ -6,7 +6,7 @@
 # check whether the current user has a ~/bin and if so add it to the PATH
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH";
 # check whether rvm was installed and if so add it to the PATH
-[ -d "$HOME/.rvm" ] && export PATH="$HOME/.rvm:$PATH";
+[ -d "$HOME/.rvm/bin" ] && export PATH="$HOME/.rvm/bin:$PATH";
 # remove duplicates from the path
 export PATH=`awk -F: '{for(i=1;i<=NF;i++){if(!($i in a)){a[$i];printf s$i;s=":"}}}'<<<$PATH`;
 
