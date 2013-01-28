@@ -5,3 +5,6 @@
 .DS_Store
 .DS_Store?
 Icon?
+
+# Sensitive files
+.ssh/
