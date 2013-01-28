@@ -6,7 +6,7 @@ alias rm='rm -i';
 # always ask for confirmation when copying files
 alias cp='cp -i';
 # alias `simplehttpd` to start a simple webserver in the current director
-alias simplehttpd='python -m SimpleHTTPServer 8888 >/dev/null 2>&1&';
+alias simplehttpd='python -m SimpleHTTPServer 8888';
 # alias to edit ~/.bash_profile and reload it after saving
 alias pro='vi ~/.bash_profile; source ~/.bash_profile';
 # make `less` not clear the screen upon exit
