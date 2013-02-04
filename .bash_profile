@@ -11,8 +11,8 @@
 export PATH=`awk -F: '{for(i=1;i<=NF;i++){if(!($i in a)){a[$i];printf s$i;s=":"}}}'<<<$PATH`;
 
 # set prompt:
-if [[ -s "$HOME/.bash/.bash_prompt" ]]; then
-  source "$HOME/.bash/.bash_prompt"
+if [[ -s "$HOME/.bash/prompt" ]]; then
+  source "$HOME/.bash/prompt"
 fi
 
 # shell variables
@@ -32,6 +32,6 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
 fi
 
 # Load aliases
-if [[ -s "$HOME/.bash/.bash_aliases" ]]; then
-	source "$HOME/.bash/.bash_aliases"
+if [[ -s "$HOME/.bash/aliases" ]]; then
+	source "$HOME/.bash/aliases"
 fi
