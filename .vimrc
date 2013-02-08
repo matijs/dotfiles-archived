@@ -32,9 +32,10 @@ set listchars=tab:▸\ ,eol:¬
 let g:solarized_termcolors=256
 " use line numbers
 set number
-" and use relative line numbers by default if possible
+" use relative line numbers by default if possible and map Ctrl-n to toggle between relative and absolute line numbers
 if exists("&relativenumber")
 	set relativenumber
+	nnoremap <C-n> :call NumberToggle()<cr>
 endif
 " toggle between relative and absolute line numbers
 function! NumberToggle()
@@ -44,7 +45,5 @@ function! NumberToggle()
 		set relativenumber
 	endif
 endfunc
-" map Ctrl-C to toggle between relative and absolute line numbers
-nnoremap <C-n> :call NumberToggle()<cr>
 " start scrolling 4 lines before hitting the bottom of the screen
 set scrolloff=4
