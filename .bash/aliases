@@ -1,6 +1,6 @@
 # aliases:
-# use colorized output when listing files
-alias ls='ls -G';
+# use colorized output when listing files and don't show group
+alias ls='ls -Go';
 # always ask for confirmation when removing files
 alias rm='rm -i';
 # always ask for confirmation when copying files
