@@ -1,5 +1,5 @@
-" use utf-8
-set enc=utf-8
+" use utf-8 without BOM
+set encoding=utf-8 nobomb
 " enable pathogen
 call pathogen#infect()
 " enable syntax highlighting
