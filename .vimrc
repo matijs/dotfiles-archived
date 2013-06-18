@@ -1,6 +1,7 @@
+" use utf-8
+set enc=utf-8
 " enable pathogen
 call pathogen#infect()
-syntax on
 " enable syntax highlighting
 syntax on 
 " use the `solarized` colorscheme
