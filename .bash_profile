@@ -18,7 +18,8 @@ fi
 # shell variables
 export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
-export HISTCONTROL=ignoredups;
+# don't log duplicate commands and blank commands
+export HISTCONTROL=ignoreboth;
 # list of commands that should not be added to history
 export HISTIGNORE="exit:[bf]g"
 # make `vi` the default system editor
