@@ -13,6 +13,7 @@ set mark-symlinked-directories on
 # a character denoting a file’s type is appended to the filename when listing possible completions
 set visible-stats on
 
+# Use `bind -p` to find out what is bound and what is unbound
 # use what's already typed as input for searching through history
 "\e[B": history-search-forward
 "\e[A": history-search-backward
