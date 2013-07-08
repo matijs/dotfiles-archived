@@ -9,3 +9,8 @@ set completion-ignore-case off
 
 # add a / to completed symlinks that are directories
 set mark-symlinked-directories on
+
+# a character denoting a file’s type is appended to the filename when listing possible completions
+set visible-stats on
+
+
