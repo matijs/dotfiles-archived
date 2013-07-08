@@ -6,3 +6,6 @@ set completion-ignore-case off
 
 # use tab to cycle through autocomplete options
 #TAB: menu-complete
+
+# add a / to completed symlinks that are directories
+set mark-symlinked-directories on
