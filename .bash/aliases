@@ -3,7 +3,7 @@
 if [["$OSTYPE" == 'linux-gnu']]; then
   alias ls='ls --color=auto'
 elif [["$OSTYPE" == 'darwin12']]; then
-  alias ls='ls -Go';
+  alias ls='ls -G';
 fi
 # always ask for confirmation when removing files
 alias rm='rm -i';
