@@ -1,8 +1,8 @@
 # aliases:
 # use colorized output when listing files and don't show group
-if [["$OSTYPE" == 'linux-gnu']]; then
+if [[ "$OSTYPE" == 'linux-gnu' ]]; then
   alias ls='ls --color=auto'
-elif [["$OSTYPE" == 'darwin12']]; then
+elif [[ "$OSTYPE" == 'darwin12' ]]; then
   alias ls='ls -G';
 fi
 # always ask for confirmation when removing files
