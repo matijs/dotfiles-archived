@@ -1,6 +1,10 @@
 # aliases:
 # use colorized output when listing files and don't show group
-alias ls='ls -Go';
+if [["$OSTYPE" == 'linux-gnu']]; then
+  alias ls='ls --color=auto'
+elif [["$OSTYPE" == 'darwin12']]; then
+  alias ls='ls -Go';
+fi
 # always ask for confirmation when removing files
 alias rm='rm -i';
 # always ask for confirmation when copying files
