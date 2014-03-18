@@ -1,10 +1,14 @@
 # aliases:
 # use colorized output when listing files and don't show group
-if [[ "$OSTYPE" == 'linux-gnu' ]]; then
-  alias ls='ls --color=auto'
-elif [[ "$OSTYPE" == 'darwin12' ]]; then
+if [[ "$OSTYPE" =~ darwin ]]; then
   alias ls='ls -G';
-fi
+else
+  alias ls='ls --color=auto';
+fi;
+# use solarized dircolors if available
+if command -v dircolors > /dev/null; then
+  [[ -e ~/.dircolors ]] && eval `dircolors .dircolors`;
+fi;
 # always ask for confirmation when removing files
 alias rm='rm -i';
 # always ask for confirmation when copying files
