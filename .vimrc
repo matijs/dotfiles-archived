@@ -2,8 +2,10 @@
 set encoding=utf-8 nobomb
 " enable pathogen
 call pathogen#infect()
+" Make Vim more useful
+set nocompatible
 " enable syntax highlighting
-syntax on 
+syntax on
 " use the `solarized` colorscheme
 colorscheme solarized
 " and make it use the dark background
@@ -12,6 +14,8 @@ set background=dark
 set ruler
 " enable commandline completion when in command mode
 set wildmenu
+" Allow cursor keys in insert mode
+set esckeys
 " use 2 chars whitespace for tabs and use proper tabs
 set noexpandtab
 set tabstop=2
@@ -28,23 +32,35 @@ set cursorline
 " show invisibles
 set list
 " use ▸ followed by spaces to show tabs, use ¬ for end of line characters
-set listchars=tab:▸\ ,eol:¬,nbsp:_,trail:•
+set listchars=tab:⇥\ ,eol:¬,nbsp:_,trail:•
 " use the solarized 256 colorscheme
 let g:solarized_termcolors=256
 " use line numbers
 set number
-" use relative line numbers by default if possible and map Ctrl-n to toggle between relative and absolute line numbers
+" use relative line numbers by default if possible
 if exists("&relativenumber")
 	set relativenumber
-	nnoremap <C-n> :call NumberToggle()<cr>
 endif
-" toggle between relative and absolute line numbers
-function! NumberToggle()
-	if(&relativenumber == 1)
-		set number
-	else
-		set relativenumber
-	endif
-endfunc
 " start scrolling 4 lines before hitting the bottom of the screen
 set scrolloff=4
+" Show commands as they are typed
+set showcmd
+" Show the current mode
+set showmode
+" Don't show the intro message when starting Vim
+set shortmess=atI
+" Automatic commands
+if has("autocmd")
+" Enable file type detection
+	filetype on
+	" Treat .json files as .js
+	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	" Remove trailing whitespace before saving
+	autocmd BufWritePre * :%s/\s\+$//e
+	" Override automatic comment insertion on enter in insert mode and when
+	" using o/O in command mode
+	autocmd FileType * set formatoptions-=r formatoptions-=o
+	if exists("&relativenumber")
+		autocmd BufReadPost * set relativenumber
+	endif
+endif
