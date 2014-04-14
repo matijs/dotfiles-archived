@@ -10,6 +10,19 @@
 # remove duplicates from the path
 export PATH=`awk -F: '{for(i=1;i<=NF;i++){if(!($i in a)){a[$i];printf s$i;s=":"}}}'<<<$PATH`;
 
+# Prefer English and use UTF-8.
+printf -v available_locales ' %s ' $(locale -a);
+for lang in en_GB en_US en; do
+	for locale in "$lang".{UTF-8,utf8}; do
+		if [[ "$available_locales" =~ " $locale " ]]; then
+			export LC_ALL="$locale";
+			export LANG="$lang";
+			break 2;
+		fi;
+	done;
+done;
+unset available_locales lang locale;
+
 # set prompt:
 if [[ -s "$HOME/.bash/prompt" ]]; then
   source "$HOME/.bash/prompt"
