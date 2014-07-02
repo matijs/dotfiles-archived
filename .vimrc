@@ -64,3 +64,7 @@ if has("autocmd")
 		autocmd BufReadPost * set relativenumber
 	endif
 endif
+" enable per-directory .vimrc files
+set exrc
+" disable unsafe commands in per-directory .vimrc files
+set secure
