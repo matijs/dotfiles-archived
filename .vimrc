@@ -12,17 +12,23 @@ colorscheme solarized
 set background=dark
 " enable a ruler at the bottom of the screen
 set ruler
+" always display the status line
+set statusline=2
 " enable commandline completion when in command mode
 set wildmenu
 " Allow cursor keys in insert mode
 set esckeys
-" use 2 chars whitespace for tabs and use proper tabs
-set noexpandtab
+" use 2 chars whitespace for tabs
 set tabstop=2
 set softtabstop=2
-set shiftwidth=2
+" use proper tabs
+set noexpandtab
 " enable loading the indent file for specific file types
 filetype plugin indent on
+" how many colums >> and << indent
+set shiftwidth=2
+" indent by multiples of shiftwidth
+set shiftround
 " don't wrap long lines
 set nowrap
 " enable autoindenting
