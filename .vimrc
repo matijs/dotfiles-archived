@@ -14,8 +14,30 @@ set background=dark
 set ruler
 " always display the status line
 set laststatus=2
-" use a nice statusline
-set statusline=%n:\ %F\ %m%r\ %=Line\ %l/%L,\ Column\ %c\ %y
+" set up the statusline
+"set statusline=%n:\ %F\ %m%r%h%p\ %{synIDattr(synID(line('.'),col('.'),1),'name')}\ %=Line\ %l/%L,\ Column\ %c\ %y
+" set up the statusline
+set statusline=
+	" buffer number
+	set statusline+=[%n]
+	" file in buffer
+	set statusline+=\ %F
+	" modified or not
+	set statusline+=\ [%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}]
+	" readonly flag
+	set statusline+=%r
+	" helpfile or not
+	set statusline+=%h
+	" highlight
+	" set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
+	" right align
+	set statusline+=%=
+	" Line number
+	set statusline+=Line\ %l/%L,
+	" Column number
+	set statusline+=\ Column\ %c
+	" Filetype
+	set statusline+=\ %y
 " enable commandline completion when in command mode
 set wildmenu
 " Allow cursor keys in insert mode
