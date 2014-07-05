@@ -1,9 +1,11 @@
+# log files
 *.log
-*.sublime-workspace
-
 # OS generated files
 .DS_Store
 .DS_Store?
-
-# Sensitive files
-.ssh/
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+# vim swap files
+*.swp
