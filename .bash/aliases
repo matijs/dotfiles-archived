@@ -7,7 +7,7 @@ else
 fi;
 # use solarized dircolors if available
 if command -v dircolors > /dev/null; then
-  [[ -e ~/.dircolors ]] && eval `dircolors .dircolors`;
+  [[ -e ~/.dircolors ]] && eval `dircolors ~/.dircolors`;
 fi;
 # always ask for confirmation when removing files
 alias rm='rm -i';
