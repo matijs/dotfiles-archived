@@ -38,7 +38,7 @@ set cursorline
 " show invisibles
 set list
 " use ▸ followed by spaces to show tabs, use ¬ for end of line characters
-set listchars=tab:⇥\ ,eol:¬,nbsp:_,trail:•
+set listchars=tab:⇥\ ,eol:¬,nbsp:_,trail:•,extends:»,precedes:«
 " use the solarized 256 colorscheme
 let g:solarized_termcolors=256
 " use line numbers
