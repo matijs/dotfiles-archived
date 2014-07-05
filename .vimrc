@@ -13,7 +13,9 @@ set background=dark
 " enable a ruler at the bottom of the screen
 set ruler
 " always display the status line
-set statusline=2
+set laststatus=2
+" use a nice statusline
+set statusline=%n:\ %F\ %m%r\ %=Line\ %l/%L,\ Column\ %c\ %y
 " enable commandline completion when in command mode
 set wildmenu
 " Allow cursor keys in insert mode
@@ -43,6 +45,8 @@ set listchars=tab:⇥\ ,eol:¬,nbsp:_,trail:•,extends:»,precedes:«
 let g:solarized_termcolors=256
 " use line numbers
 set number
+" use a 5 char wide gutter for linenumbers
+set numberwidth=5
 " use relative line numbers by default if possible
 if exists("&relativenumber")
 	set relativenumber
