@@ -96,10 +96,6 @@ if has("autocmd")
 		autocmd BufReadPost * set relativenumber
 	endif
 endif
-" enable per-directory .vimrc files
-set exrc
-" disable unsafe commands in per-directory .vimrc files
-set secure
 " force using h/j/k/l instead of arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
