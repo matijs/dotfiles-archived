@@ -95,6 +95,8 @@ if has("autocmd")
 	if exists("&relativenumber")
 		autocmd BufReadPost * set relativenumber
 	endif
+	" reload .vimrc when updating it
+	autocmd BufWritePost .vimrc nested source %
 endif
 " force using h/j/k/l instead of arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
