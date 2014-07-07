@@ -23,7 +23,7 @@ unset available_locales lang locale;
 
 # set prompt:
 if [[ -s "$HOME/.bash/prompt" ]]; then
-  source "$HOME/.bash/prompt"
+  source "$HOME/.bash/prompt";
 fi
 
 # shell variables
@@ -32,7 +32,7 @@ export HISTFILESIZE=$HISTSIZE;
 # don't log duplicate commands and blank commands
 export HISTCONTROL=ignoreboth;
 # list of commands that should not be added to history
-export HISTIGNORE="exit:[bf]g"
+export HISTIGNORE="exit:[bf]g";
 # make `vi` the default system editor
 export EDITOR='vi';
 # make `man` use use `less` for paging and not clear the screen upon exit
@@ -40,5 +40,5 @@ export MANPAGER='less -X';
 
 # Load aliases
 if [[ -s "$HOME/.bash/aliases" ]]; then
-	source "$HOME/.bash/aliases"
+	source "$HOME/.bash/aliases";
 fi
