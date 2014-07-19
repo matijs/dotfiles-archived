@@ -26,3 +26,6 @@ alias ffs='sudo ';
 
 # git log
 alias gl='git log --oneline --all --color --graph --decorate'
+
+# start a new tmux session or attach to an existing one named after the current directory
+alias tat='tmux new-session -As `basename $PWD`'
