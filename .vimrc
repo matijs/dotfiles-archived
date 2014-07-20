@@ -75,6 +75,9 @@ if exists("&relativenumber")
 endif
 " start scrolling 4 lines before hitting the bottom of the screen
 set scrolloff=4
+" Ignore case when searching, but be smart about it
+set ignorecase
+set smartcase
 " Show commands as they are typed
 set showcmd
 " Show the current mode
