@@ -10,6 +10,8 @@ syntax on
 colorscheme solarized
 " and make it use the dark background
 set background=dark
+" set the leader key
+let mapleader=" "
 " enable a ruler at the bottom of the screen
 set ruler
 " always display the status line
@@ -78,6 +80,12 @@ set scrolloff=4
 " Ignore case when searching, but be smart about it
 set ignorecase
 set smartcase
+" Highlight search results as they are found
+set incsearch
+" Highlight the last found search results
+set hlsearch
+" Clear last found search results
+nnoremap <leader><space> :nohlsearch<CR>
 " Show commands as they are typed
 set showcmd
 " Show the current mode
