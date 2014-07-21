@@ -126,6 +126,7 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+" disable arrow keys in insert mode to force a switch to command mode
 inoremap <Left> <nop>
 inoremap <Right> <nop>
 inoremap <Up> <nop>
