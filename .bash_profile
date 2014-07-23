@@ -35,6 +35,7 @@ export HISTCONTROL=ignoreboth;
 export HISTIGNORE="exit:[bf]g";
 # make `vi` the default system editor
 export EDITOR='vi';
+export VISUAL='vi';
 # make `man` use use `less` for paging and not clear the screen upon exit
 export MANPAGER='less -X';
 
