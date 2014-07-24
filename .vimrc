@@ -32,6 +32,8 @@ set statusline=
 	set statusline+=%h
 	" highlight
 	" set statusline+=\ %{synIDattr(synID(line('.'),col('.'),1),'name')}
+	" git
+	set statusline+=\ %{fugitive#statusline()}
 	" right align
 	set statusline+=%=
 	" Line number
@@ -72,7 +74,7 @@ set number
 " use a 5 char wide gutter for linenumbers
 set numberwidth=5
 " use relative line numbers by default if possible
-if exists("&relativenumber")
+if exists("+relativenumber")
 	set relativenumber
 endif
 " start scrolling 4 lines before hitting the bottom of the screen
