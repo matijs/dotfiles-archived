@@ -129,3 +129,8 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 inoremap <Up> <nop>
 inoremap <Down> <nop>
+" disable arrow keys in command mode to really unlearn using arrow keys
+cnoremap <Left> <C-u>:echoe "Use C-w, C-u, or C-b"<CR>
+cnoremap <Right> <C-u>:echoe "Use C-e"<CR>
+cnoremap <Up> <C-u>:echoe "Use C-p"<CR>
+cnoremap <Down> <C-u>:echoe "Use C-n"<CR>
