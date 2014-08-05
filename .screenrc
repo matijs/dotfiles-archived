@@ -1,9 +1,0 @@
-# Use Ctrl+J instead of Ctrl+A, which goes to the start of a line in Bash and  other applications that use the Readline library.
-escape ^Jj
-
-# do not show the introduction screen
-startup_message off
-
-# Don't block command output if the terminal stops responding (for example, if the SSH connection times out).
-nonblock on
-
