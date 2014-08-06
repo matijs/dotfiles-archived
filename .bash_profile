@@ -3,14 +3,14 @@
 [ -d "$HOME/Library/Haskell/bin" ] && export PATH="$HOME/Library/Haskell/bin:$PATH";
 # check whether the mysql binary directory exists and if so add it to the PATH
 [ -d "/usr/local/mysql/bin" ] && export PATH="/usr/local/mysql/bin:$PATH";
-# check whether the current user has a ~/bin and if so add it to the PATH
+# check whether the current user has a $HOME/bin and if so add it to the PATH
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH";
 # remove duplicates from the path
 export PATH=`awk -F: '{for(i=1;i<=NF;i++){if(!($i in a)){a[$i];printf s$i;s=":"}}}'<<<$PATH`;
 
 # use solarized dircolors if available
 if command -v dircolors > /dev/null; then
-  [[ -e ~/.dircolors ]] && eval `dircolors ~/.dircolors`;
+  [[ -e $HOME/dircolors ]] && eval `dircolors $HOME/dircolors`;
 fi;
 
 # Prefer English and use UTF-8.
