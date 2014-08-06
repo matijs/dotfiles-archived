@@ -2,8 +2,10 @@
 # use colorized output when listing files and don't show group
 if [[ "$OSTYPE" =~ darwin ]]; then
   alias ls='ls -G';
+  alias ll='ls -lG';
 else
   alias ls='ls --color=auto';
+  alias ll='ls --color=auto -l';
 fi;
 
 # always ask for confirmation when removing files
