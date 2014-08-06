@@ -5,26 +5,26 @@ if [[ "$OSTYPE" =~ darwin ]]; then
 else
   alias ls='ls --color=auto';
 fi;
-# use solarized dircolors if available
-if command -v dircolors > /dev/null; then
-  [[ -e ~/.dircolors ]] && eval `dircolors ~/.dircolors`;
-fi;
+
 # always ask for confirmation when removing files
 alias rm='rm -i';
+
 # always ask for confirmation when copying files
 alias cp='cp -i';
+
 # alias `simplehttpd` to start a simple webserver in the current director
 alias simplehttpd='python -m SimpleHTTPServer 8888';
+
 # alias to edit ~/.bash_profile and reload it after saving
 alias pro='vi ~/.bash_profile; source ~/.bash_profile';
+
 # make `less` not clear the screen upon exit
 alias less='less -X';
+
 # just for fun, but also make bash expand other aliasses for sudo, http://git.io/wtfbash
 alias ffs='sudo ';
 
 # git aliases
-
-# git log
 alias gl='git log --oneline --all --color --graph --decorate'
 
 # start a new tmux session or attach to an existing one named after the current directory
