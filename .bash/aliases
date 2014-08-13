@@ -25,6 +25,8 @@ alias less='less -X';
 
 # just for fun, but also make bash expand other aliasses for sudo, http://git.io/wtfbash
 alias ffs='sudo ';
+# and of course also do this for sudo itself
+alias sudo='sudo ';
 
 # git aliases
 alias gl='git log --oneline --all --color --graph --decorate'
