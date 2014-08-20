@@ -33,3 +33,6 @@ alias gl='git log --oneline --all --color --graph --decorate'
 
 # start a new tmux session or attach to an existing one named after the current directory
 alias tat='tmux new-session -As `basename $PWD`'
+
+# always use vim instead of vi, this _strangly_ prevents unexplained non-zero exit codes on OS X
+alias vi=vim
