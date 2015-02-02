@@ -3,9 +3,11 @@
 if [[ "$OSTYPE" =~ darwin ]]; then
   alias ls='ls -G';
   alias ll='ls -lG';
+	alias la='ls -lGa';
 else
   alias ls='ls --color=auto';
   alias ll='ls --color=auto -l';
+	alias la='ls --color=auto -la';
 fi;
 
 # always ask for confirmation when removing files
