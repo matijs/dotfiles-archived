@@ -84,18 +84,6 @@ set incsearch
 set hlsearch
 " Clear last found search results
 nnoremap <leader><space> :nohlsearch<CR>
-" Tab autocompletion from
-" https://github.com/thoughtbot/dotfiles/blob/master/vimrc
-function InsertTabWrapper()
-	let col = col('.') - 1
-	if !col || getline('.')[col - 1] !~ '\k'
-		return "\<Tab>"
-	else
-		return "\<C-p>"
-	endif
-endfunction
-inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
-inoremap <S-Tab> <C-n>
 " Show commands as they are typed
 set showcmd
 " Show the current mode
