@@ -4,8 +4,6 @@ set encoding=utf-8 nobomb
 call pathogen#infect()
 " Make Vim more useful
 set nocompatible
-" enable syntax highlighting
-syntax on
 " use the `solarized` colorscheme
 colorscheme solarized
 " and make it use the dark background
@@ -122,3 +120,5 @@ cnoremap <Left> <C-u>:echoe "Use C-w, C-u, or C-b"<CR>
 cnoremap <Right> <C-u>:echoe "Use C-e"<CR>
 cnoremap <Up> <C-u>:echoe "Use C-p"<CR>
 cnoremap <Down> <C-u>:echoe "Use C-n"<CR>
+" enable syntax highlighting
+syntax on
