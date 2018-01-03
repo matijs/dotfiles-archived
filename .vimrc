@@ -4,6 +4,9 @@ set encoding=utf-8 nobomb
 call pathogen#infect()
 " Make Vim more useful
 set nocompatible
+" enable modeline
+set modeline
+set modelines=1
 " use the `solarized` colorscheme
 colorscheme solarized
 " and make it use the dark background
