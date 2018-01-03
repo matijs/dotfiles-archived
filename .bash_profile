@@ -50,3 +50,16 @@ export MANPAGER="less -X";
 if [[ -s "$HOME/.bash/aliases" ]]; then
 	source "$HOME/.bash/aliases";
 fi
+
+# shell autocompletion
+bash_completion="/usr/local/etc/bash_completion";
+git_completion="/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash";
+
+if [[ -s "${bash_completion}" ]]; then
+	source "${bash_completion}";
+	if [[ -s "${git_completion}" ]]; then
+		source "${git_completion}";
+	fi
+fi
+
+unset bash_completion git_completion
