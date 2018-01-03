@@ -1,11 +1,14 @@
-#export PS1='(\!) \u@\h:\W \[$PROMPT_SMILEY\]\$ ';
-# to be executed every time before a prompt is displayed
-#export PROMPT_COMMAND='[ $? -eq 0 ] && PROMPT_SMILEY="$(tput sgr0)" || PROMPT_SMILEY="$(tput setaf 1)! $(tput sgr0)"';
+# vi: syntax=sh
+git_prompt=/Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh;
 
-source ~/.bash/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWSTASHSTATE=true
-export GIT_PS1_SHOWUPSTREAM="auto"
-export GIT_PS1_DESCRIBE_STYLE="branch"
-export GIT_PS1_SHOWCOLORHINTS=true
-export PS1='(\!) \u@\h:\W $(__git_ps1 "[%s] ")\$ '
+if [[ -s "${git_prompt}" ]]; then
+  source "${git_prompt}";
+  export GIT_PS1_SHOWDIRTYSTATE=true;
+  export GIT_PS1_SHOWSTASHSTATE=true;
+  export GIT_PS1_SHOWUPSTREAM="auto";
+  export GIT_PS1_DESCRIBE_STYLE="branch";
+  export GIT_PS1_SHOWCOLORHINTS=true;
+  export PS1='(\!) \u@\h:\W $(__git_ps1 "[%s] ")\$ ';
+fi
+
+unset git_prompt;
