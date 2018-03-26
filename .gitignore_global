@@ -9,3 +9,6 @@
 Thumbs.db
 # vim swap files
 *.swp
+# sublime text files
+*.sublime-project
+*.sublime-workspace

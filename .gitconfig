@@ -1,0 +1,18 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = /usr/bin/vim
+[user]
+	name = matijs
+	email = matijs@gmail.com
+	useConfigOnly = true
+[merge]
+	tool = vimdiff
+	conflictStyle = diff3
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[pager]
+	status = true
+[clean]
+	requireForce = false
