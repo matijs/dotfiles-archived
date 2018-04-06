@@ -22,8 +22,10 @@ alias simplehttpd='python -m SimpleHTTPServer 8888';
 # alias to edit ~/.bash_profile and reload it after saving
 alias pro='vi ~/.bash_profile; source ~/.bash_profile';
 
+# make `less` immediately exit if paging is not needed
 # make `less` not clear the screen upon exit
-alias less='less -X';
+# make `less` respect color control characters
+alias less='less -FXR';
 
 # just for fun, but also make bash expand other aliasses for sudo, http://git.io/wtfbash
 alias ffs='sudo ';
