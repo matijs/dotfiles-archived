@@ -1,8 +1,5 @@
 # set path:
-# check whether the Haskell binary directory exists and if so add it to the PATH
-[ -d "$HOME/Library/Haskell/bin" ] && export PATH="$HOME/Library/Haskell/bin:$PATH";
-# check whether the mysql binary directory exists and if so add it to the PATH
-[ -d "/usr/local/mysql/bin" ] && export PATH="/usr/local/mysql/bin:$PATH";
+
 # check whether the current user has a $HOME/bin and if so add it to the PATH
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH";
 # add node_modules/.bin as a relative path to the PATH
