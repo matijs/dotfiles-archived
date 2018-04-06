@@ -41,7 +41,7 @@ export HISTIGNORE="exit:[bf]g";
 export EDITOR="/usr/bin/vi";
 export VISUAL="/usr/bin/vi";
 # make `man` use use `less` for paging and not clear the screen upon exit
-export MANPAGER="less -X";
+export MANPAGER="less -FXR";
 
 # Load aliases
 if [[ -s "$HOME/.bash/aliases" ]]; then
