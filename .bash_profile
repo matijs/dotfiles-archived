@@ -34,8 +34,8 @@ export HISTCONTROL=ignoreboth;
 # list of commands that should not be added to history
 export HISTIGNORE="exit:[bf]g";
 # make `vi` the default system editor
-export EDITOR="/usr/bin/vi";
-export VISUAL="/usr/bin/vi";
+export EDITOR="/usr/bin/vim";
+export VISUAL="/usr/bin/vim";
 # make `man` use use `less` for paging and not clear the screen upon exit
 export MANPAGER="less -FXR";
 
