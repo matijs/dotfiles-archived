@@ -3,11 +3,11 @@
 if [[ "$OSTYPE" =~ darwin ]]; then
   alias ls='ls -G';
   alias ll='ls -lG';
-	alias la='ls -lGa';
+  alias la='ls -lGa';
 else
   alias ls='ls --color=auto';
   alias ll='ls --color=auto -l';
-	alias la='ls --color=auto -la';
+  alias la='ls --color=auto -la';
 fi;
 
 # always ask for confirmation when removing files
@@ -16,27 +16,16 @@ alias rm='rm -i';
 # always ask for confirmation when copying files
 alias cp='cp -i';
 
-# alias `simplehttpd` to start a simple webserver in the current director
-alias simplehttpd='python -m SimpleHTTPServer 8888';
-
-# alias to edit ~/.bash_profile and reload it after saving
-alias pro='vi ~/.bash_profile; source ~/.bash_profile';
-
 # make `less` immediately exit if paging is not needed
 # make `less` not clear the screen upon exit
 # make `less` respect color control characters
 alias less='less -FXR';
 
-# just for fun, but also make bash expand other aliasses for sudo, http://git.io/wtfbash
-alias ffs='sudo ';
-# and of course also do this for sudo itself
+# make bash expand other aliasses for sudo, http://git.io/wtfbash
 alias sudo='sudo ';
 
 # git aliases
 alias gl='git log --oneline --all --color --graph --decorate'
 
-# start a new tmux session or attach to an existing one named after the current directory
-alias tat='tmux new-session -As `basename $PWD`'
-
-# always use vim instead of vi, this _strangly_ prevents unexplained non-zero exit codes on OS X
+# always use vim instead of vi, this strangly prevents unexplained non-zero exit codes on OS X
 alias vi=vim
