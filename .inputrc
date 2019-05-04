@@ -1,16 +1,19 @@
-# only hit tab once instead of twice when possible completions are ambiguous
+# Only hit tab once instead of twice when possible completions are ambiguous
 set show-all-if-ambiguous on
+set show-all-if-unmodified on
 
-# don't ignore case when using command line completion
+# Don't ignore case when using command line completion
 set completion-ignore-case off
 
-# use tab to cycle through autocomplete options
-#TAB: menu-complete
-
-# add a / to completed symlinks that are directories
+# Add a "/" to completed symlinks that are directories
 set mark-symlinked-directories on
 
-# a character denoting a file’s type is appended to the filename when listing possible completions
+# A character denoting a file's type is appended to the filename when listing
+# possible completions
 set visible-stats on
 
-# Use `bind -p` to find out what is bound and what is unbound
+# Keep tab for normal completion but add ctrl-p for cycling through options
+"\C-p": menu-complete
+"\C-h": 'cd ~\015'
+
+# Tip: use `bind -p` to find out what is bound and what is unbound
