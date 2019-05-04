@@ -1,9 +1,5 @@
-# set path:
-
 # check whether the current user has a $HOME/bin and if so add it to the PATH
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH";
-# add node_modules/.bin as a relative path to the PATH
-export PATH="node_modules/.bin:$PATH";
 # remove duplicates from the path
 export PATH=`awk -F: '{for(i=1;i<=NF;i++){if(!($i in a)){a[$i];printf s$i;s=":"}}}'<<<$PATH`;
 
