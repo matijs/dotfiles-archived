@@ -1,18 +1,26 @@
 [core]
-	excludesfile = ~/.gitignore_global
 	editor = /usr/bin/vim
-[user]
-	name = matijs
-	email = matijs@gmail.com
-	useConfigOnly = true
-[merge]
-	tool = vimdiff
-	conflictStyle = diff3
-[pull]
-	rebase = true
+	excludesfile = ~/.gitignore_global
+	pager = /usr/bin/less
+[color]
+	diff = always
+	pager = false
 [fetch]
 	prune = true
-[pager]
-	status = true
-[clean]
-	requireForce = false
+	pruneTags = true
+[merge]
+	ff = only
+[pull]
+	rebase = true
+[push]
+	default = nothing
+[rebase]
+	autoStash = true
+[rerere]
+	enabled = true
+[status]
+	showStash = true
+	showUntrackedFiles = all
+[user]
+	useConfigOnly = true
+
