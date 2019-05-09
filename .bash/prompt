@@ -8,7 +8,7 @@ if [[ -s "${git_prompt}" ]]; then
   export GIT_PS1_SHOWUPSTREAM="auto";
   export GIT_PS1_DESCRIBE_STYLE="branch";
   export GIT_PS1_SHOWCOLORHINTS=true;
-  export PS1='(\!) \u@\h:\W $(__git_ps1 "[%s] ")\$ ';
+  export PS1='(\e[0;35m\!\e[m) \u@\h:\W $(__git_ps1 "[%s] ")\$ ';
 fi
 
 unset git_prompt;
